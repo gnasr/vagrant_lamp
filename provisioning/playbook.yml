@@ -1,12 +1,16 @@
 ---
 - hosts: lamp
+  user: vagrant
+  become: true
+  become_user: root
+  become_method: sudo
 
   vars_files:
     - vars/main.yml
 
   roles:
     - geerlingguy.apache
-    - geerlingguy.php
     - geerlingguy.mysql
+    - geerlingguy.php
 
 ...
