@@ -1,4 +1,4 @@
 ---
-- src: geerlingguy.php
 - src: geerlingguy.apache
 - src: geerlingguy.mysql
+- src: geerlingguy.php
