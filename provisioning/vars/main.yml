@@ -2,14 +2,12 @@
 hostname: "lamp"
 
 apache_listen_port: 80
+apache_remove_default_vhost: true
 apache_vhosts:
  - servername: "dev"
-   documentroot: "/var/www"
+   documentroot: "/var/www/webapp"
 
 mysql_root_password: 123456
 mysq_enabled_on_startup: yes
 
-mysql_users:
- - name: developer
-   host: "%"
-   password: test123
+php_packages: [libapache2-mod-php5]
