@@ -1,16 +1,24 @@
 ---
 - hosts: lamp
+<<<<<<< HEAD
   user: vagrant
   become: true
   become_user: root
   become_method: sudo
+=======
+>>>>>>> 3ed3d4b5acf1bcfcd79c3762fc170d1694733f3a
 
   vars_files:
     - vars/main.yml
 
   roles:
     - geerlingguy.apache
+<<<<<<< HEAD
     - geerlingguy.mysql
     - geerlingguy.php
+=======
+    - geerlingguy.php
+    - geerlingguy.mysql
+>>>>>>> 3ed3d4b5acf1bcfcd79c3762fc170d1694733f3a
 
 ...
