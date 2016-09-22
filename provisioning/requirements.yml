@@ -1,10 +1,5 @@
 ---
-<<<<<<< HEAD
 - src: geerlingguy.apache
 - src: geerlingguy.mysql
 - src: geerlingguy.php
-=======
-- src: geerlingguy.php
-- src: geerlingguy.apache
-- src: geerlingguy.mysql
->>>>>>> 3ed3d4b5acf1bcfcd79c3762fc170d1694733f3a
+
