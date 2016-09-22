@@ -18,8 +18,7 @@ You can install this roles inside this folder or in ansible's default roles path
 
 For example, to install the roles in this folder:
 ``` 
-mkdir -p roles
-ansible-galaxy install -r requirements.yml --roles-path=./roles
+ansible-galaxy install -r requirements.yml --roles-path=./provisioning/roles
 ```
 
 ##Defaults:
