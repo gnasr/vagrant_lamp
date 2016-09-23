@@ -13,15 +13,9 @@ In order to use this Vagrantfile, first you need to:
 * geerlingguy.mysql
 * geerlingguy.php
 
-You can install this roles inside this folder or in ansible's default roles path, with the following command:
-`ansible-galaxy install -r requirements.yml`.
-
-For example, to install the roles in this folder:
-``` 
-ansible-galaxy install -r requirements.yml --roles-path=./provisioning/roles
-```
+To install this roles, you must enter in ansible folder and run the following command:
+`ansible-galaxy install -r roles/roles_requirements.yml`.
 
 ##Defaults:
 * apache_listen_port: 80
-* mysql_root_password: 123456
 * mysq_enabled_on_startup: yes
