@@ -19,3 +19,4 @@ To install this roles, you must enter in ansible folder and run the following co
 ##Defaults:
 * apache_listen_port: 80
 * mysq_enabled_on_startup: yes
+* mysql_root_password: 123456
