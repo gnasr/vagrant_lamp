@@ -1,0 +1,10 @@
+---
+- hosts: lamp
+
+  vars_files:
+    - "group_vars/lamp"
+
+  roles:
+    - geerlingguy.mysql
+    - geerlingguy.php
+    - geerlingguy.apache
