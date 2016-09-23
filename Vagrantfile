@@ -8,8 +8,8 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "webapp/", "/var/www/webapp", create: true
   
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "provisioning/playbook.yml"
-    ansible.inventory_path = "provisioning/ansible_hosts"
+    ansible.playbook = "ansible/lamp.yml"
+    ansible.inventory_path = "ansible/ansible_hosts"
     ansible.limit = "all"
   end
 
