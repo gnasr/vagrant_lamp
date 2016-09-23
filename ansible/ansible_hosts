@@ -1,0 +1,2 @@
+[lamp]
+server1 ansible_host=192.168.150.10 ansible_user=vagrant ansible_become=true ansible_become_method=sudo ansible_become_user=root
