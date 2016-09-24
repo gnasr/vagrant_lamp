@@ -32,11 +32,10 @@ Now you are ready to start the virtual machine:
 ```
 vagrant up
 ```
-
 Vagrant will download an Ubuntu 14.04 image and create the virtual machine, then ansible will configure the services.
-* To test if apache and php were installed successfully you need to enter this url in your web browser
-`http://192.168.150.10/`
-You must see a web page showing the info of the php version installed.
+
+##Testing
+* To test if apache and php were successfully installed, you need to enter this url in your web browser `http://192.168.150.10/`. You must see a web page showing the info of the php version installed.
 * To test mysql enter in your terminal, (use the default password):
 ```
 vagrant ssh
@@ -50,7 +49,7 @@ You should see something like:
 | 5.5.52-0ubuntu0.14.04.1 |
 +-------------------------+
 ```
-##Roles variables:
+##Ansible roles variables:
 
 |Variable|Default|
 |---|:--|
