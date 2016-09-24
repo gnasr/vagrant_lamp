@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "ansible/lamp.yml"
-    ansible.inventory_path = "ansible/ansible_hosts"
+    ansible.inventory_path = "ansible/vagrant_hosts.ini"
     ansible.limit = "all"
   end
 
