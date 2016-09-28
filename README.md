@@ -1,6 +1,7 @@
 # vagrant_lamp
 This Vagrantfile will deploy a virtual machine with the ip 192.168.150.10, then will configure it as a lamp server.
-A shared folder called 'webapp' is setup so you can easily deploy your webapp into '/var/www'
+A shared folder called 'webapp' is setup so you can easily deploy your webapp into '/var/www'.
+The Ansible playbook will also install Influxdb with Telegraf to collect metrics and Grafana as dashboard to display the metrics.
 
 ##Instructions
 In order to use this Vagrantfile, first you need to:
@@ -52,6 +53,14 @@ You should see something like:
 | 5.5.52-0ubuntu0.14.04.1 |
 +-------------------------+
 ```
+
+To enter in Grafana dashboard you need to enter this url in your web browser and use the default user and password:
+```
+http://192.168.150.10:3000
+```
+Then go to datasources and configure influxdb with the url `http://localhost:8086` and telegraf as database name.
+Now you are ready to start adding querys into your dashboard to show mysql, apache or system stats.
+
 ##Ansible roles variables:
 
 |Variable|Default|
@@ -59,3 +68,6 @@ You should see something like:
 |```apache_listen_port```|80|
 |```mysql_enabled_on_startup```|yes|
 |```mysql_root_password```|root|
+|```grafana_admin_user```|admin|
+|```grafana_admin_password```|admin|
+|```telegraf_plugins_extra```|mysql, apache|
