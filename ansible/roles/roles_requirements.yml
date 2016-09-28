@@ -5,3 +5,9 @@
   version: 2.3.2
 - src: geerlingguy.php
   version: 3.3.0
+- src: ansiblebit.influxdb
+  version: 2.14.0
+- src: dj-wasabi.telegraf
+  version: 0.5.1
+- src: Stouts.grafana
+  version: 3.0.1

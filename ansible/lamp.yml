@@ -5,3 +5,6 @@
     - external/geerlingguy.mysql
     - external/geerlingguy.php
     - external/geerlingguy.apache
+    - external/ansiblebit.influxdb
+    - external/dj-wasabi.telegraf
+    - external/Stouts.grafana
