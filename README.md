@@ -21,6 +21,9 @@ To install php, apache and mysql this Vagrantfile uses Ansible as provisioner, s
 * geerlingguy.apache
 * geerlingguy.mysql
 * geerlingguy.php
+* ansiblebit.influxdb
+* dj-wasabi.telegraf
+* Stouts.grafana
 
 You can install this roles using `ansible-galaxy`:
 ```
