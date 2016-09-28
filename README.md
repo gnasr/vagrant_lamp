@@ -61,7 +61,7 @@ http://192.168.150.10:3000
 Then go to datasources and configure influxdb with the url `http://localhost:8086` and telegraf as database name.
 Now you are ready to start adding querys into your dashboard to show mysql, apache or system stats.
 
-##Ansible roles variables:
+##Ansible default roles variables:
 
 |Variable|Default|
 |---|:--|
