@@ -1,20 +1,20 @@
 ---
-# apache playbook
+#apache playbook
 apache_listen_port: 80
 apache_remove_default_vhost: true
 apache_vhosts:
  - servername: "dev"
    documentroot: "/var/www/webapp"
 
-# mysql playbook
-mysq_enabled_on_startup: yes
-
 # php playbook
 php_packages: [libapache2-mod-php5]
 
 # telegraf playbook
 telegraf_plugins_extra:
-    - plugin: mysql
-      config:
-        - servers = ["root:{{ mysql_root_password }}@tcp(localhost:3306)/"]
     - plugin: apache
+
+telegraf_agent_output:
+  - type: influxdb
+    config:
+      - urls = ["http://{{ groups['metrics'][0] }}:8086"]
+      - database = "telegraf"

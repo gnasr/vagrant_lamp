@@ -1,0 +1,15 @@
+---
+# mysql playbook
+mysq_enabled_on_startup: yes
+
+# telegraf playbook
+telegraf_plugins_extra:
+    - plugin: mysql
+      config:
+        - servers = ["root:{{ mysql_root_password }}@tcp(localhost:3306)/"]
+
+telegraf_agent_output:
+  - type: influxdb
+    config:
+      - urls = ["http://{{ groups['metrics'][0] }}:8086"]
+      - database = "telegraf"
