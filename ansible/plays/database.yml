@@ -1,0 +1,6 @@
+---
+- hosts: databases
+
+  roles:
+    - ../roles/external/geerlingguy.mysql
+    - ../roles/external/dj-wasabi.telegraf

@@ -1,0 +1,7 @@
+---
+- hosts: webservers
+
+  roles:
+    - ../roles/external/geerlingguy.php
+    - ../roles/external/geerlingguy.apache
+    - ../roles/external/dj-wasabi.telegraf
